@@ -1,0 +1,30 @@
+.uploading{
+    width: 400px;
+    height: 143px;
+    border-radius: 12px;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.20);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & .loader{
+        font-size: 40px;
+        opacity: .8;
+        font-weight: 700;
+        color: #000;
+        display: inline-block;
+        font-family: Arial, Helvetica, sans-serif;
+        position: relative;
+        &:after{
+            content: '';
+            margin-top: .5rem;
+            height: 6px;
+            border-radius: 5px;
+            width:0%;
+            display: block;
+            background: #FF3D00;
+            animation: 5s lineGrow linear infinite;
+        }
+    }
+}
+
+@keyframes lineGrow {to{width: 100%;}}
